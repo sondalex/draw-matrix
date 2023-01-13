@@ -22,3 +22,10 @@ draw-matrix 5 2 --embed=1 --width=20 --height=20 --fontsize=5pt | dot -Tsvg
 Output:
 
 ![](graph.svg)
+
+## Installation
+
+```console
+pip install git+https://github.com/sondalex/draw-matrix.git
+```
+
