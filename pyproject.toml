@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "draw-matrix"
 description = "Tools to draw matrix"
 readme = "README.md"
-version = "0.0.1"
+version = "0.1.0"
 
 [project.scripts]
 draw-matrix = "draw_matrix.main:main"
