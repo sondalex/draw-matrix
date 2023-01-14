@@ -77,14 +77,25 @@ def cli():
         required=False,
         help="Fontsize",
     )
-
+    parser.add_argument(
+        "--random",
+        dest="random",
+        default=1,
+        type=int,
+        action="store",
+        required=False,
+        help="Whether to compute random values. If set to 0 and empty array is returned",
+    )
     return parser
 
 
 def main():
     parser = cli()
     args = parser.parse_args()
-    matrix = np.around(np.random.uniform(0, 1, args.size), decimals=2)
+    if bool(args.random) is True:
+        matrix = np.around(np.random.uniform(0, 1, args.size), decimals=2)
+    else:
+        matrix = np.repeat([["" for i in range(args.size[1])]], args.size[0], 0)
     str_ = gen_dot_matrix(
         matrix=matrix,
         matrix_name=args.name,

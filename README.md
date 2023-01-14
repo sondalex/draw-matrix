@@ -23,6 +23,16 @@ Output:
 
 ![](graph.svg)
 
+Generate an empty matrix:
+
+```
+draw-matrix 5 2 --embed=1 --width=20 --height=20 --fontsize=5pt --random=0 | dot -Tsvg
+```
+
+Output:
+
+![](graph2.svg)
+
 ## Installation
 
 ```console
